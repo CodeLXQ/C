@@ -1,6 +1,32 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-
+void func(char s[2])
+{
+	int m = sizeof(s);
+	int n = strlen(s);
+	printf("%d", m);
+	printf("%d", n);
+}
+int main(void)
+{
+	char str[] = "hello";
+	func(str);
+}
+/*
+int main()
+{
+	unsigned long a = 0x11000000;
+	printf("%x", *(unsigned char*)&a);
+	return 0;
+}
+/*
+int main()
+{
+	char s[] = "\\123456\123456\t";//   \\连一起代表\，\之后加数字小于128则为一个字符,不能在字符里写单\。
+	printf("%s", s);
+	printf("%d\n", strlen(s));
+	return 0;
+}
 /*
 int main()
 {
